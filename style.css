@@ -416,7 +416,7 @@ a:hover {
 .header {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 4px 8px 0px 2px;
+    padding: 4px 8px 0px 8px;
     height: 46px;
     cursor: default;
     user-select: none;
