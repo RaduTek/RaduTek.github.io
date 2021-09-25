@@ -384,8 +384,9 @@ a:hover {
 
 .background {
     background: var(--back-color);
-    background: url(/images/backgrounds/Spaceship.jpg) center no-repeat;
+    background: url(/images/backgrounds/Spaceship_Blur.jpg) center no-repeat;
     background-size: cover;
+    filter: blur(2px);
     z-index: -999;
     position: fixed;
     top: 0;
