@@ -405,7 +405,7 @@ a:hover {
     right: 0;
     background: #3a3f4c;
     background: linear-gradient(to bottom, #3a3f4caa 0%, #222631aa 100%);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
     border-top: 1px solid var(--accent-color-dark);
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -528,7 +528,7 @@ a:hover {
         rgba(0, 0, 0, 0.1) 5px
     ),
     linear-gradient(to bottom, #3a3f4cdd 0%, #161920dd 100%);
-
+    backdrop-filter: blur(8px);
     box-shadow: 0px 0px 12px var(--back-color), inset 5px 5px 5px 0px #0000004d;
     border: 1px solid var(--border-color-blue);
     border-radius: 8px;
@@ -552,6 +552,7 @@ a:hover {
 .sub {
     background: #626262;
     background: linear-gradient(to bottom, #626262aa 0%, #4a4a4aaa 100%);
+    backdrop-filter: blur(8px);
     border: 1px solid #777;
     border-radius: 8px;
     box-shadow: 0px 0px 12px var(--back-color);
@@ -607,6 +608,7 @@ a:hover {
     border-top: 1px solid var(--border-color);
     background: #161920;
     background: linear-gradient(to bottom, #3a3f4caa 0%, #161920aa 100%);
+    backdrop-filter: blur(8px);
 }
 
 .footer {
