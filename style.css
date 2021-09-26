@@ -538,7 +538,9 @@ a:hover {
     user-select: none;
 }
 .title-picture {
-    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     width: auto;
     height: 128px;
     margin-top: -14px;
