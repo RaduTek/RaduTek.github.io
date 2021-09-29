@@ -12,6 +12,7 @@
     --fore-color: #fff;
     --border-color: #5e6a77;
     --border-color-blue: #364060;
+    --border-color-blue-light: #568;
 
     --footer-height: 63px;
 
@@ -62,21 +63,30 @@ body {
     padding: 3px !important;
     display: none;
 }
+.mobile-header-expand svg {
+    color: #aaa;
+    width: 28px;
+    height: 24px;
+    transition: color 0.2s;
+}
+.mobile-header-expand:hover svg {
+    color: #ccc;
+}
 
 @media screen and (max-width: 700px) {
     .mobile-header-expand {
-    display: unset;
+        display: unset;
     }
 
     .header-links {
-    display: none;
-    width: 100%;
-    float: left;
-    margin-left: 3px;
+        display: none;
+        width: 100%;
+        float: left;
+        margin-left: 3px;
     }
 
     .header-links .link {
-    margin: 8px 2px !important;
+        margin: 8px 2px !important;
     }
 }
 
@@ -220,7 +230,7 @@ a:hover {
     color: var(--fore-color);
     text-shadow: 0px 0px 4px #aaa;
     text-align: center;
-    border: 1px solid #568;
+    border: 1px solid var(--border-color-blue-light);
     border-radius: 6px;
     padding: 6px 2px;
     position: absolute;
@@ -241,7 +251,7 @@ a:hover {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #777 transparent transparent transparent;
+    border-color: var(--border-color-blue-light) transparent transparent transparent;
 }
 .tt.tt-bottom {
     top: 125%;
@@ -256,7 +266,7 @@ a:hover {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #777 transparent;
+    border-color: transparent transparent var(--border-color-blue-light) transparent;
 }
 
 .tt.tt-1 {
@@ -452,6 +462,8 @@ a:hover {
     background: #99999944;
 }
 .header .link svg {
+    width: 16px;
+    height: 16px;
     vertical-align: middle;
     margin-top: -2px;
     margin-left: -2px;
@@ -598,6 +610,8 @@ a:hover {
 }
 .crumbs svg,
 .menubar svg {
+    width: 16px;
+    height: 16px;
     filter: drop-shadow(0px 0px 4px #aaa);
 }
 
@@ -637,6 +651,10 @@ a:hover {
 .footer .social-bar a {
     text-decoration: none;
     filter: drop-shadow(0px 0px 2px #888);
+}
+.footer .social-bar svg {
+    width: 32px;
+    height: 32px;
 }
 
 /* #endregion */
