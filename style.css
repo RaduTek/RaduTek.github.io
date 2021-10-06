@@ -204,6 +204,7 @@ a:hover {
     color: #fff !important;
 }
 
+
 /* #endregion */
 
 /* #region Controls (Inputs, Buttons) ====================================== */
@@ -549,6 +550,7 @@ a:hover {
     text-shadow: 0px 0px 10px #ccc;
     user-select: none;
     overflow: hidden;
+    position: relative;
 }
 .title-picture {
     position: absolute;
