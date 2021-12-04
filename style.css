@@ -506,7 +506,6 @@ a:hover {
 }
 
 .header-logo .logo-image {
-    width: 45px;
     height: 45px;
     margin-top: 0px;
     vertical-align: middle;
@@ -556,7 +555,7 @@ a:hover {
     bottom: 0;
     right: 0;
     width: auto;
-    height: 128px;
+    height: 112px;
     margin-top: -14px;
     filter: drop-shadow(0px 0px 5px #ccc);
     z-index: 100;
