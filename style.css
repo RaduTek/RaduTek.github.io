@@ -1,5 +1,5 @@
-/* Main Style File (main.css) ==============================================
-* Copyright RaduTek 2021
+/* Main Style File ========== ==============================================
+* Copyright RaduTek 2022
 */
 
 /* #region Common variables & font ========================================= */
@@ -10,6 +10,8 @@
     --accent-color-dark: #118088;
     --back-color: #161920;
     --fore-color: #fff;
+    --fore-color-2: #eee;
+    --fore-color-3: #ddd;
     --border-color: #5e6a77;
     --border-color-blue: #364060;
     --border-color-blue-light: #568;
@@ -223,17 +225,17 @@ a:hover {
 }
 
 .tt-parent .tt {
+    font-size: 10pt;
     visibility: hidden;
     opacity: 0;
     background: #3a3f4c;
     background: linear-gradient(to bottom, #3a3f4ccc 0%, #222631cc 100%);
-    backdrop-filter: blur(12px);
-    color: var(--fore-color);
+    backdrop-filter: blur(4px);
+    color: var(--fore-color-2);
     text-shadow: 0px 0px 4px #aaa;
     text-align: center;
     border: 1px solid var(--border-color-blue-light);
     border-radius: 6px;
-    padding: 6px 2px;
     position: absolute;
     z-index: 1;
     box-shadow: 0px 0px 6px var(--border-color-blue);
@@ -243,6 +245,7 @@ a:hover {
 .tt.tt-top {
     bottom: 125%;
     left: 50%;
+    padding: 4px 2px 5px 2px;
 }
 .tt.tt-top::after {
     content: '';
@@ -257,7 +260,7 @@ a:hover {
 .tt.tt-bottom {
     top: 125%;
     left: 50%;
-    padding: 4px 2px 6px 2px;
+    padding: 3px 2px 5px 2px;
 }
 .tt.tt-bottom::after {
     content: '';
@@ -443,25 +446,26 @@ a:hover {
     float: right;
 }
 
-.header .link {
-    color: #ccc;
+.header .link .link-button {
+    color: var(--fore-color-3);
     display: inline-block;
     margin: 10px 0px 0px 0px;
-    padding: 2px 6px 4px 6px;
+    padding: 2px 6px 3px 6px;
     background: transparent;
     border-radius: 3px;
-    transition: box-shadow 0.2s, background 0.2s;
+    transition: box-shadow 0.2s, background 0.2s, color 0.2s;
     text-decoration: none;
     text-shadow: 0px 0px 4px #888;
 }
-.header .link:hover {
+.header .link  .link-button:hover {
+    color: var(--fore-color-2);
     background: #55555544;
     box-shadow: 0px 0px 4px var(--border-color);
 }
-.header .link:active {
+.header .link  .link-button:active {
     background: #99999944;
 }
-.header .link svg {
+.header .link  .link-button svg {
     width: 16px;
     height: 16px;
     vertical-align: middle;
@@ -648,9 +652,9 @@ a:hover {
 }
 .footer .social-bar a {
     text-decoration: none;
-    filter: drop-shadow(0px 0px 2px #888);
 }
 .footer .social-bar svg {
+    filter: drop-shadow(0px 0px 2px #888);
     width: 32px;
     height: 32px;
 }
