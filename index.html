@@ -3,12 +3,13 @@
     <head>
         <title>Home - RaduTek's Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/images/logo/Favicon.ico">
+        <link rel="icon" type="image/x-icon" href="/images/logo/Favicon.ico" />
         <!-- Local Includes -->
         <link rel="stylesheet" href="/style.css" />
         <script src="/main.js"></script>
         <!-- Third party includes -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     </head>
     <body>
         <div class="background"></div>
@@ -23,38 +24,38 @@
                 </button>
                 <div class="header-links" id="header-links">
                     <div class="header-left">
-                        <a href="#" class="link tt-parent">
+                        <a href="/" class="link tt-parent">
                             <span class="tt tt-bottom tt-2 tt-delayed">Home Page</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#home" /></svg>
+                                <iconify-icon icon="mdi:home-outline" width="16"></iconify-icon>
                                 Home
                             </span>
                         </a>
-                        <a href="#" class="link tt-parent">
+                        <a href="https://github.com/RaduTek?tab=repositories" class="link tt-parent">
                             <span class="tt tt-bottom tt-5 tt-delayed">Here are my projects</span>
-                            <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#projects" /></svg>
+                            <span class="link-button"
+                                ><iconify-icon icon="mdi:toy-brick-outline" width="16"></iconify-icon>
                                 Projects
                             </span>
                         </a>
                         <a href="#" class="link tt-parent">
                             <span class="tt tt-bottom tt-5 tt-delayed">Read what I've posted</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#posts" /></svg>
+                                <iconify-icon icon="mdi:clipboard-text-outline" width="16"></iconify-icon>
                                 Posts
                             </span>
                         </a>
                         <a href="#" class="link tt-parent">
                             <span class="tt tt-bottom tt-5 tt-delayed">Download some stuff</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#files" /></svg>
+                                <iconify-icon icon="mdi:folder-download-outline" width="16"></iconify-icon>
                                 Files
                             </span>
                         </a>
                         <a href="#" class="link tt-parent">
                             <span class="tt tt-bottom tt-3 tt-delayed">More about me</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#about" /></svg>
+                                <iconify-icon icon="mdi:account-outline" width="16"></iconify-icon>
                                 About
                             </span>
                         </a>
@@ -63,14 +64,14 @@
                         <a href="#" class="link tt-parent">
                             <span class="tt tt-bottom tt-4 tt-delayed">Let's get in touch!</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#social" /></svg>
+                                <iconify-icon icon="mdi:share-variant" width="16"></iconify-icon>
                                 Social
                             </span>
                         </a>
                         <a href="#" class="link tt-parent">
                             <span class="tt tt-bottom tt-3 tt-delayed">Find some stuff</span>
                             <span class="link-button">
-                                <svg><use href="/images/icons/icons.svg#search" /></svg>
+                                <iconify-icon icon="mdi:magnify" width="16"></iconify-icon>
                                 Search
                             </span>
                         </a>
@@ -87,7 +88,10 @@
             <div class="content">
                 <div class="sub">
                     <h4 class="heading">A bit of info</h4>
-                    <p>Hello, I am Radu and I'm a teenage computer nerd. I love computers, old and new and I especially love making programs for them.</p>
+                    <p>
+                        Hello, I am Radu and I'm a teenage computer nerd. I love computers, old and new and I especially
+                        love making programs for them.
+                    </p>
                     <p>My favorite programming language is C#, but I also like designing websites and UIs.</p>
                 </div>
                 <div class="sub">
@@ -95,39 +99,46 @@
                     <p>This site really needs more functionality added to it and that will come with more time.</p>
                 </div>
                 <div class="sub">
-                    <h4 class="heading">New posts</h4>
-                    <p>Welp, nothing to see.</p>
+                    <h4 class="heading">Highlighted Projects</h4>
+                    <p>Stuff I'm proud about:</p>
                 </div>
             </div>
         </div>
         <div class="footer-container">
             <div class="footer">
                 <div class="float-right social-bar">
-                <a href="/" class="tt-parent">
-                    <span class="tt tt-top tt-3">Website Home</span>
-                    <svg><use href="/images/icons/icons.svg#home" width=32 height=32 /></svg>
-                </a>
-                <a href="https://youtube.com/RaduTek" class="tt-parent">
-                    <span class="tt tt-top tt-1">YouTube</span>
-                    <svg><use href="/images/icons/icons.svg#youtube" width=32 height=32 /></svg>
-                </a>
-                <a href="https://twitter.com/RaduTek13" class="tt-parent">
-                    <span class="tt tt-top tt-1">Twitter</span>
-                    <svg><use href="/images/icons/icons.svg#twitter" width=32 height=32 /></svg>
-                </a>
-                <a href="https://reddit.com/u/RaduTek" class="tt-parent">
-                    <span class="tt tt-top tt-1">Reddit</span>
-                    <svg><use href="/images/icons/icons.svg#reddit" width=32 height=32 /></svg>
-                </a>
-                <a href="https://discord.gg/5dkP6xUTbp" class="tt-parent">
-                    <span class="tt tt-top tt-1">Discord</span>
-                    <svg><use href="/images/icons/icons.svg#discord" width=32 height=32 /></svg>
-                </a>
+                    <a href="/" class="tt-parent">
+                        <span class="tt tt-top tt-3">Website Home</span>
+                        <iconify-icon icon="mdi:home-outline" width="32"></iconify-icon>
+                    </a>
+                    <a href="https://github.com/RaduTek" class="tt-parent">
+                        <span class="tt tt-top tt-1">GitHub</span>
+                        <iconify-icon icon="mdi:github" width="32"></iconify-icon>
+                    </a>
+                    <a href="https://youtube.com/RaduTek" class="tt-parent">
+                        <span class="tt tt-top tt-1">YouTube</span>
+                        <iconify-icon icon="mdi:youtube" width="32"></iconify-icon>
+                    </a>
+                    <!-- <a href="https://twitter.com/RaduTek13" class="tt-parent">
+                        <span class="tt tt-top tt-1">Twitter</span>
+                        <iconify-icon icon="mdi:twitter" width="32"></iconify-icon>
+                    </a>
+                    <a href="https://reddit.com/u/RaduTek" class="tt-parent">
+                        <span class="tt tt-top tt-1">Reddit</span>
+                        <iconify-icon icon="ic:baseline-reddit" width="32"></iconify-icon>
+                    </a> -->
+                    <a href="https://discord.gg/5dkP6xUTbp" class="tt-parent">
+                        <span class="tt tt-top tt-1">Discord</span>
+                        <iconify-icon icon="ic:baseline-discord" width="32"></iconify-icon>
+                    </a>
                 </div>
-                <p>Made by RaduTek with <svg style="width: 12px; height: 12px; vertical-align: top; margin-top: 3px;"><use href="/images/icons/icons.svg#heart" width=12 height=12 /></svg></p>
                 <p>
-                <!-- <a href="#">Privacy Policy</a> -->
-                <a href="#">Contact</a>
+                    Made by RaduTek with
+                    <iconify-icon icon="mdi:cards-heart-outline" width="12"></iconify-icon>
+                </p>
+                <p>
+                    <!-- <a href="#">Privacy Policy</a> -->
+                    <a href="#">Contact</a>
                 </p>
             </div>
         </div>
