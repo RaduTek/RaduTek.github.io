@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<main>
+    <section>
+        <h1>Posts tagged: "{{ page.title }}"</h1>
+
+        {% for post in page.posts %}
+            {% include post_item.html post=post %}
+        {% endfor %}
+
+        <p class="text-small"><a href="{{ '/tags' | relative_url }}">← Back to tags</a></p>
+    </section>
+</main>

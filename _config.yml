@@ -1,0 +1,18 @@
+title: RaduTek's Website
+description: >-
+  This is my personal website.
+baseurl: ""
+url: ""
+github_username:  radutek
+
+show_excerpts: true
+
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: [tags]
+  layouts:
+    tag: tag-archive
+  permalinks:
+    tag: '/tag/:name/'
