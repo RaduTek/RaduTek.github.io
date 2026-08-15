@@ -222,6 +222,7 @@ small, .text-small {
     background-color: #161920;
     box-shadow: inset 0 -3px 40px #000;
     overflow: hidden;
+    user-select: none;
 }
 
 .page .header-background img {
@@ -245,6 +246,7 @@ small, .text-small {
     background: -webkit-linear-gradient(top, #1e1f20 0%, #26292e 70%);
     background: linear-gradient(to bottom, #1e1f20 0%, #26292e 70%);
     overflow: hidden;
+    user-select: none;
 }
 
 .page .header {
@@ -497,6 +499,7 @@ small, .text-small {
     color: #727272;
     text-shadow: 0 -1px 0 #000;
     padding-top: 30px;
+    user-select: none;
 }
 
 .footer a {
