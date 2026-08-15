@@ -336,7 +336,6 @@ small, .text-small {
     background: -webkit-linear-gradient(top, rgba(29, 39, 46, 0.7), #1d272e 150px);
     background: linear-gradient(to bottom, rgba(29, 39, 46, 0.7), #1d272e 150px);
     border-color: rgba(4, 204, 223, 0.3);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
 }
 
 .page .content .side {
