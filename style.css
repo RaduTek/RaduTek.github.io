@@ -349,12 +349,12 @@ small, .text-small {
     padding-right: 15px;
     border-radius: 10px 0 0 10px;
     background-color: rgba(0, 0, 0, 0.06);
+    line-height: 1.3;
 }
 
 .page.dark .content .side {
     color: #ddd;
     background-color: rgba(0, 15, 25, 0.3);
-    line-height: 1.3;
 }
 
 .page .content .side h1 {
