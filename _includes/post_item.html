@@ -1,0 +1,13 @@
+<article class="post-list">
+    <h2 class="post-title">
+        <a class="post-link" href="{{ include.post.url | relative_url }}">
+            {{ include.post.title | escape }}
+        </a>
+    </h2>
+    <p class="post-meta">Posted on <span>{{ include.post.date | date: "%b %-d, %Y" }}</span></p>
+    {%- if site.show_excerpts -%}
+        {{ include.post.excerpt }}
+    {%- endif -%}
+    <p class="post-more"><a href="{{ include.post.url | relative_url }}">Read more &rarr;</a></p>
+</article>
+<hr>

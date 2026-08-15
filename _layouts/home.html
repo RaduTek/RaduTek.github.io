@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="side">
+    <section>
+        <h1><a href="/tags/">Tags</a></h1>
+        <p>
+            {% for tag in site.tags limit:20 %}
+            <a href="{{ tag[0] | slugify | prepend: '/tag/' | relative_url }}">
+                {{ tag[0] }} ({{ tag[1] | size }})</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        </p>
+    </section>
+    <hr>
+</div>
+
+<main>
+
+<section>    
+    <h1>{{ page.title }}</h1>
+    
+    {{ content }}
+</section>
+
+
+{%- if site.posts.size > 0 -%}
+<section>
+    <h2>Latest Posts</h2>
+
+    {%- for post in site.posts limit:3 -%}
+    {% include post_card.html post=post %}
+    {%- endfor -%}
+
+    <p class="text-small text-right"><a href="/posts/">View all posts &rarr;</a></p>
+</section>
+{%- endif -%}
+
+</main>

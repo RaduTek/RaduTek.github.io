@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.github_username }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="stylesheet" href="/style.css">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <div class="page" id="page">
+        <div class="header-background">
+            <img src="/images/header-cover.jpg" alt="Header Background">
+        </div>
+        <div class="footer-background"></div>
+
+        <header class="global-nav">
+            <nav class="constrain">
+                <ul class="links float-right">
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/devices/">Devices</a></li>
+                    <li><a href="//ln.radutek.uk">Links</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <header class="header">
+            <div class="constrain header-container">
+                <img class="logo-image" src="/images/logo-head.png" alt="Logo">
+                <img class="logo-text" src="/images/logo-text.png" alt="RaduTek">
+
+                <nav class="header-links">
+                    <ul>
+                        <li><a href="/" class="first">Home</a></li>
+                        <li><a href="/posts/">Posts</a></li>
+                        <li><a href="/about/" class="last">About me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="constrain content">
+            {{ content }}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright &copy; RaduTek 2026. <a href="javascript:toggleTheme()">Change Theme</a></p>
+    </footer>
+
+    <script>
+    var page = $("#page");
+
+    (function () {
+        var saved = null;
+
+        try {
+            saved = localStorage.getItem("theme");
+        } catch (e) {
+        }
+
+        if (saved === "dark") {
+            page.addClass("dark");
+        } else if (saved === "light") {
+        } else {
+            var prefersDark = false;
+            try {
+                prefersDark = window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches;
+            } catch (e) {
+            }
+
+            if (prefersDark) {
+                page.addClass("dark");
+            }
+        }
+    })();
+
+    function toggleTheme() {
+        page.toggleClass("dark");
+
+        try {
+            localStorage.setItem("theme", page.hasClass("dark") ? "dark" : "light");
+        } catch (e) {
+        }
+    }
+    </script>
+</body>
+
+</html>

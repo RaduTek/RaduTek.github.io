@@ -1,0 +1,15 @@
+---
+layout: page
+title: Tags
+---
+
+<ul>
+  {% for tag in site.tags %}
+    {% assign t = tag[0] %}
+    <li>
+        <a href="{{ t | slugify | prepend: '/tag/' | relative_url }}">
+            <strong>{{ t }}</strong> ({{ tag[1] | size }})
+        </a>
+    </li>
+  {% endfor %}
+</ul>
