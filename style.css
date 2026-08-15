@@ -325,7 +325,7 @@ small, .text-small {
     color: #000;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85), #fff 150px);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), #fff 150px);
-    border: 1px solid #eee;
+    border: 1px solid #fff;
     min-height: 420px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
