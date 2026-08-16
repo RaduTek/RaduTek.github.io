@@ -6,6 +6,7 @@ url: ""
 github_username:  radutek
 
 show_excerpts: true
+permalink: /posts/:title/
 
 plugins:
   - jekyll-archives
