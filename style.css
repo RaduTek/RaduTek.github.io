@@ -125,11 +125,19 @@ table {
     border-spacing: 0;
 }
 
-
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
     background-color: #26292e;
+}
+
+.clearfix {
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .float-left {
@@ -156,8 +164,8 @@ small, .text-small {
 }
 
 .global-nav {
-    background: #222;
     color: #ccc;
+    background: #232628;
     background: -webkit-linear-gradient(top, rgba(58, 63, 76, 0.8) 0%, rgba(34, 38, 49, 0.8) 94%, rgba(112, 112, 112, 0.6) 97%, rgba(0, 0, 0, 0.9) 100%);
     background: linear-gradient(to bottom, rgba(58, 63, 76, 0.8) 0%, rgba(34, 38, 49, 0.8) 94%, rgba(112, 112, 112, 0.6) 97%, rgba(0, 0, 0, 0.9) 100%);
     height: 32px;
@@ -177,19 +185,23 @@ small, .text-small {
 }
 
 .global-nav ul.links {
+    border-right: 1px solid #444;
+    border-left: 1px solid #111;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-left: 1px solid rgba(0, 0, 0, 0.35);
 }
 
 .global-nav ul.links li {
     float: left;
+    border-left: 1px solid #444;
+    border-right: 1px solid #111;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.35);
 }
 
 .global-nav a {
     display: inline-block;
-    color: inherit;
+    color: #ccc;
     text-decoration: none;
     border: 0;
     outline: none;
@@ -199,12 +211,14 @@ small, .text-small {
 }
 
 .global-nav a:hover {
+    background-color: #111;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .page {
     background-color: #ddd;
     position: relative;
+    z-index: 1;
 }
 
 .page.dark {
@@ -213,11 +227,13 @@ small, .text-small {
 
 .page .header-background {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 320px;
+    border-bottom: 1px solid #3e4c69;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     background-color: #161920;
     box-shadow: inset 0 -3px 40px #000;
@@ -236,12 +252,14 @@ small, .text-small {
 
 .page .footer-background {
     position: absolute;
+    z-index: -1;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 20px;
-    background-color: #232323;
+    background-color: #26292e;
+    border-top: 1px solid #2e343f;
     border-top: 1px solid rgba(120, 140, 180, 0.2);
     background: -webkit-linear-gradient(top, #1e1f20 0%, #26292e 70%);
     background: linear-gradient(to bottom, #1e1f20 0%, #26292e 70%);
@@ -285,6 +303,7 @@ small, .text-small {
     background-color: #568;
     background: -webkit-linear-gradient(top, rgba(120, 140, 180, 0.8), rgba(85, 102, 136, 0.8));
     background: linear-gradient(to bottom, rgba(120, 140, 180, 0.8), rgba(85, 102, 136, 0.8));
+    border: 1px solid #7b93c2;
     border: 1px solid rgba(117, 137, 187, 0.8);
     border-radius: 18px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
@@ -298,15 +317,17 @@ small, .text-small {
 
 .page .header .header-links ul li a {
     display: inline-block;
-    color: inherit;
+    color: #eee;
     text-decoration: none;
     padding: 11px 13px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    border-left: 1px solid #7b93c2;
     border-left: 1px solid rgba(117, 137, 187, 0.8);
     transition: background-color 0.2s;
 }
 
 .page .header .header-links ul li a:hover {
+    background-color: #607498;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -337,6 +358,7 @@ small, .text-small {
     color: #fff;
     background: -webkit-linear-gradient(top, rgba(29, 39, 46, 0.7), #1d272e 150px);
     background: linear-gradient(to bottom, rgba(29, 39, 46, 0.7), #1d272e 150px);
+    border-color: #24909a;
     border-color: rgba(4, 204, 223, 0.3);
 }
 
@@ -390,11 +412,16 @@ small, .text-small {
 }
 .page .content .side hr {
     color: transparent !important;
+    background-color: transparent !important;
     border: none;
+    outline: none;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px dashed #ddd;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
     margin: -4px 0 -4px 15px;
 }
 .page.dark .content .side hr {
+    border-color: #3A495E;
     border-color: rgba(85, 102, 136, 0.8);
 }
 
@@ -444,10 +471,12 @@ small, .text-small {
 
 .page .content main section > h1,
 .page .content main section > h2 {
+    border-bottom: 1px dashed #ddd;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .page.dark .content main section > h1,
 .page.dark .content main section > h2 {
+    border-color: #3A495E;
     border-color: rgba(85, 102, 136, 0.8);
 }
 
@@ -469,7 +498,10 @@ small, .text-small {
 
 .page .content main hr {
     color: transparent !important;
+    background-color: transparent !important;
     border: none;
+    outline: none;
+    border-width: 0 0 1px 0;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .page.dark .content main hr {
@@ -543,6 +575,7 @@ small, .text-small {
 
 .card {
     border: 1px solid #ccc;
+    background-color: #f5f5f5;
     background-color: rgba(0, 0, 0, 0.05);
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.06));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.06));
@@ -553,7 +586,9 @@ small, .text-small {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 .dark .card {
+    border-color: #24909a;
     border-color: rgba(4, 204, 223, 0.3);
+    background-color: #162129;
     background-color: rgba(0, 15, 25, 0.3);
     background: -webkit-linear-gradient(top, rgba(0, 15, 25, 0.1), rgba(0, 15, 25, 0.35));
     background: linear-gradient(to bottom, rgba(0, 15, 25, 0.1), rgba(0, 15, 25, 0.35));
